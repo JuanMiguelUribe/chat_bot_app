@@ -1,3 +1,4 @@
+import 'package:chat_bot/presentation/providers/them_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:chat_bot/domain/entities/message.dart';
@@ -29,7 +30,15 @@ class ChatScreen extends StatelessWidget {
           ),
         ),
         centerTitle: false,
-        title: const Text('Chat Bot'),
+        title: const Text('BotSitu'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.brightness_6),
+            onPressed: () {
+              context.read<ThemeProvider>().toggleTheme();
+            },
+          ),
+        ],
       ),
       body: _ChatView(),
     );

@@ -1,6 +1,6 @@
+import 'package:chat_bot/presentation/providers/them_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:chat_bot/core/theme/app_theme.dart' show AppTheme;
 import 'package:chat_bot/presentation/providers/chat_provider.dart';
 import 'package:chat_bot/presentation/screens/chat/chat_screen.dart';
 
@@ -14,14 +14,32 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => ChatProvider()),
-
+        ChangeNotifierProvider(create: (_) => ThemeProvider()),
       ],
-      child: MaterialApp(
-        title: 'Yes No App',
-        debugShowCheckedModeBanner: false,
-        theme: AppTheme(selectedColor: 8).theme(),
-        home: ChatScreen(),
+      child: const _AppWithTheme(),
+    );
+  }
+}
+
+class _AppWithTheme extends StatelessWidget {
+  const _AppWithTheme();
+
+  @override
+  Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);
+    return MaterialApp(
+      title: 'Yes No App',
+      debugShowCheckedModeBanner: false,
+      themeMode: themeProvider.currentTheme,
+      theme: ThemeData(
+        brightness: Brightness.light,
+        colorSchemeSeed: Colors.teal,
       ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        colorSchemeSeed: Colors.deepPurple,
+      ),
+      home: ChatScreen(),
     );
   }
 }

@@ -19,7 +19,9 @@ class HisMessageBubble extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             child: Padding(
               padding: const EdgeInsets.only(left: 8.0, bottom: 4.0),
-              child: Text(message.text, style: TextStyle(color: Colors.white),
+              child: Text(message.text, style: TextStyle(
+                  color: Theme.of(context).colorScheme.onPrimary,
+                ),
               ),
               ),
             ),
