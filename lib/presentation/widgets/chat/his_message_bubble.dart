@@ -1,9 +1,5 @@
-import 'package:flutter/material.dart';
-<<<<<<< HEAD
 import 'package:chat_bot/domain/entities/message.dart';
-=======
-import 'package:yes_no_app/domain/entities/message.dart';
->>>>>>> df352588c684eed00066cac2dd2fc017673c31c0
+import 'package:flutter/material.dart';
 
 class HisMessageBubble extends StatelessWidget {
   final Message message;
@@ -29,6 +25,7 @@ class HisMessageBubble extends StatelessWidget {
             ),
           ),
         SizedBox(height: 5),
+        if(message.imageUrl != null)
         Padding(
           padding: const EdgeInsets.only(left: 8),
           child: _ImageBubble(message.imageUrl!),
@@ -164,11 +161,7 @@ class _TypingDotsState extends State<TypingDots>
 }
 
 class Dot extends AnimatedWidget {
-<<<<<<< HEAD
   const Dot({super.key, required Animation<double> animation})
-=======
-  const Dot({required Animation<double> animation})
->>>>>>> df352588c684eed00066cac2dd2fc017673c31c0
     : super(listenable: animation);
 
   @override

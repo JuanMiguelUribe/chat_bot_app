@@ -29,7 +29,7 @@ class ChatScreen extends StatelessWidget {
           ),
         ),
         centerTitle: false,
-        title: const Text('Yes or Not'),
+        title: const Text('Chat Bot'),
       ),
       body: _ChatView(),
     );
