@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:yes_no_app/core/theme/app_theme.dart' show AppTheme;
-import 'package:yes_no_app/presentation/providers/chat_provider.dart';
-import 'package:yes_no_app/presentation/screens/chat/chat_screen.dart';
+import 'package:chat_bot/core/theme/app_theme.dart' show AppTheme;
+import 'package:chat_bot/presentation/providers/chat_provider.dart';
+import 'package:chat_bot/presentation/screens/chat/chat_screen.dart';
 
 void main() => runApp(const MyApp());
 

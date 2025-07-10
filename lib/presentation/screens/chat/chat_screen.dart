@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:yes_no_app/domain/entities/message.dart';
-import 'package:yes_no_app/presentation/providers/chat_provider.dart';
-import 'package:yes_no_app/presentation/widgets/chat/his_message_bubble.dart';
-import 'package:yes_no_app/presentation/widgets/chat/my_message_bubble.dart';
-import 'package:yes_no_app/presentation/widgets/shared/message_fielD_box.dart';
+import 'package:chat_bot/domain/entities/message.dart';
+import 'package:chat_bot/presentation/providers/chat_provider.dart';
+import 'package:chat_bot/presentation/widgets/chat/his_message_bubble.dart';
+import 'package:chat_bot/presentation/widgets/chat/my_message_bubble.dart';
+import 'package:chat_bot/presentation/widgets/shared/message_fielD_box.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
@@ -56,7 +56,7 @@ class _ChatView extends StatelessWidget {
                 itemBuilder: (context, index) {
                   final message = chatProvider.messageList[index];
                   return (message.fromWho == FromWho.friend)
-                  ? HisMessageBubble()
+                  ? HisMessageBubble(message: message)
                   : MyMessageBubble(message: message);
                 },
               ),
