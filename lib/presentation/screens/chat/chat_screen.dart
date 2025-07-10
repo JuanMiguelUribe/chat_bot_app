@@ -14,7 +14,7 @@ class ChatScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: SizedBox(
-          width: 56,
+          width: 55,
           child: Align(
             alignment: Alignment.centerLeft,
             child: Padding(
@@ -29,7 +29,7 @@ class ChatScreen extends StatelessWidget {
           ),
         ),
         centerTitle: false,
-        title: const Text('ChatBot'),
+        title: const Text('Yes or Not'),
       ),
       body: _ChatView(),
     );

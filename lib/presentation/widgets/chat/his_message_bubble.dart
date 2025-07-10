@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:chat_bot/domain/entities/message.dart';
+=======
+import 'package:yes_no_app/domain/entities/message.dart';
+>>>>>>> df352588c684eed00066cac2dd2fc017673c31c0
 
 class HisMessageBubble extends StatelessWidget {
   final Message message;
@@ -160,7 +164,11 @@ class _TypingDotsState extends State<TypingDots>
 }
 
 class Dot extends AnimatedWidget {
+<<<<<<< HEAD
   const Dot({super.key, required Animation<double> animation})
+=======
+  const Dot({required Animation<double> animation})
+>>>>>>> df352588c684eed00066cac2dd2fc017673c31c0
     : super(listenable: animation);
 
   @override

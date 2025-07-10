@@ -2,7 +2,11 @@
 //
 //     final yesNoModel = yesNoModelFromJson(jsonString);
 
+<<<<<<< HEAD
 import 'package:chat_bot/domain/entities/message.dart';
+=======
+import 'package:yes_no_app/domain/entities/message.dart';
+>>>>>>> df352588c684eed00066cac2dd2fc017673c31c0
 
 class YesNoModel {
   final String answer;
